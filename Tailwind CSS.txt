@@ -17,7 +17,7 @@
 
 
 //---------------------------------------------------------------------------------------------------------------------------------------------
-				-- My_GitHub_repo: https://github.com/Shahed-Chy-Suzan/property-listing
+				-- My_GitHub_repo: https://github.com/Shahed-Chy-Suzan/Tailwind-CSS-Practice
 //---------------------------------------------------------------------------------------------------------------------------------------------
 
 
@@ -81,14 +81,15 @@
 
 
 
-//-------------------------------------------------------------- #02 Tailwind Installation --------------------------------------------------
+//------------------------------------------------------- #03 Utility-First Approach --------------------------------------------------
+		//-- Tailwind- utility first approach use kore, ar Onnodike Bootstrap components based(ex: full Card banano thake) approach use kore.
+		//-- doc_link: https://tailwindcss.com/docs/utility-first
 
 
 
-
-
-
-
+//----------------------------------------------- #04 Responsive variants - Tailwind Breakpoints --------------------------------------------------
+		//-- Tailwind- utility first approach use kore, ar Onnodike Bootstrap components based(ex: full Card banano thake) approach use kore.
+		//-- doc_link: https://tailwindcss.com/docs/utility-first
 
 
 
