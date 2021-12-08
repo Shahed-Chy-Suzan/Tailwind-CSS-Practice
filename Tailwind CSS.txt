@@ -1,0 +1,109 @@
+
+//==============================================================================================
+													******	Tailwind CSS	 ******
+//==============================================================================================
+
+			//-- Documentation : https://tailwindcss.com/docs
+
+
+
+//------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+											//-------------- Resources of Tailwind CSS --------------//
+				-- Learn with sumit YT : https://www.youtube.com/playlist?list=PLHiZ4m8vCp9P23SqlHL0QAqiwS_oCofV2
+							-- Learn with sumit git : https://github.com/learnwithsumit/tailwind-playlist				
+				-- YT : https://www.youtube.com/watch?v=00gyCtIQp8E&list=WL&index=2&t=64s
+//------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+
+//---------------------------------------------------------------------------------------------------------------------------------------------
+				-- My_GitHub_repo: https://github.com/Shahed-Chy-Suzan/property-listing
+//---------------------------------------------------------------------------------------------------------------------------------------------
+
+
+
+
+
+
+
+//==================================================================================================
+											------------------ Start Tailwind CSS -----------------------
+//==================================================================================================
+
+
+//-------------------------------------------------------------- #02 Tailwind Installation --------------------------------------------------
+			
+		//-- Installation with Tialwind CSS CDN	 //but ei process e korle amra tailwind k customize korte parbo na.
+		//-- Installa as PostCSS Plugin 	//difficult for fresher
+		//-- Installa tailwind CLI 	//easier process //etar fole amara Command Line diye tailwind use korte parbo. //etai best approach
+						-- tailwind CLI machine e install er prerequisit hocche machine e Node.js >= 12.3.0 install thakte hobe ( https://nodejs.org ).
+								-- check node installed or not, command: node -v
+		
+		//-- VS Code plugin for tailwind css : 
+						-- Link: https://marketplace.visualstudio.com/items?itemName=bradlc.vscode-tailwindcss
+						-- plugin name: Tailwind CSS IntelliSense
+						
+		//-- Tailwind CSS installation by Command line (CLI)					
+						-- npm init -y							//1ti node initialize kore pelbo //will create a ''package.json' file
+						-- npm i -D tailwindcss		//or npm i tailwindcss //tailwind css k developer dependency hisebe install kore nibo package.json file er dependency te
+						-- npx tailwindcss init			//tailwind css er jonno ekti configuration file banano. //project er moddhe "tailwind.config.js" name e ekti file create hoye jabe. ei file e amra tailwind er sokol configuration + customization er kaj korte parbo.
+						
+						-- ekn amra amder project e "output" & "src" hisebe 2ta file create korbo.
+									-- 'src' folder e amra tailwind er kajkarbar korbo R 'output' folder e tailwind amader k tar compiler er sahajje ekdom vanilla CSS toiri kore dibe.
+									-- "src" folder er vitore "tailwind.css" name e ekta file create korbo. amara etai random name o dithe pari no problem, oi file e nicher 3ta line add kore/likhe dithe hobe.
+												-- @tailwind base;
+												-- @tailwind components;
+												-- @tailwind utilities;
+
+		//-- create ".vscode" folder then create a "settings.json" file into this. then write this below code into this "settings.json" file for tailwind project purpose.
+						-- .vscode
+								-- settings.json
+											{
+											  "css.validate": false,
+											  "tailwindCSS.emmetCompletions": true
+											}
+
+		//-- in "package.json" file add below code in 'scripts'
+						  "scripts": {
+								// "test": "echo \"Error: no test specified\" && exit 1",									//ei line default chilo, eta delete kore dibo.
+								"build": "tailwindcss -i ./src/tailwind.css -o ./output/tailwind.css -w"			//-- newly added for tailwind code build
+						  },
+						  
+					//--ekhane build scripts tai "-i" name holo input, "-o" mane holo output, "-w" mane holo watch(auto build/watch), ekhane amra bole diyechi j amader ei project er tailwindCss er jonno input file konta R output(jeta raw css e convert/compile/build hobe) file konta hobe, ekhan e amra output file ta jodio create kori ni manually just name ta bole diyechi build-scripts e, R amader k ekta create o korte hobe na, eta automatic ei name e onosare create hoye jabe.
+					
+		//-- create an "index.html" file in project root
+		
+		//-- compile/build howar por amra output e j css file ta(ei project er khettre 'tailwind.css') pabo oita k amader "index.html" file e head er moddhe link koriye dithe hobe. Ehane amader must be ei compile/build howa css file ta kei html file path thik rekhe link korate hobe.
+							-- <link rel="stylesheet" href="./output/tailwind.css" />
+							
+		//-- run command: npm run build			//eti amder code k build kore pelbe, amra ready ekn code korar jonno tailwind css e.
+
+
+
+
+//-------------------------------------------------------------- #02 Tailwind Installation --------------------------------------------------
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
