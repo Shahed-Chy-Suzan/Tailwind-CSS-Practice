@@ -34,8 +34,8 @@
 //-------------------------------------------------------------- #02 Tailwind Installation --------------------------------------------------
 			
 		//-- Installation with Tialwind CSS CDN	 //but ei process e korle amra tailwind k customize korte parbo na.
-		//-- Installa as PostCSS Plugin 	//difficult for fresher
-		//-- Installa tailwind CLI 	//easier process //etar fole amara Command Line diye tailwind use korte parbo. //etai best approach
+		//-- Install as PostCSS Plugin 	//difficult for fresher
+		//-- Install tailwind CLI 	//easier process //etar fole amara Command Line diye tailwind use korte parbo. //etai best approach
 						-- tailwind CLI machine e install er prerequisit hocche machine e Node.js >= 12.3.0 install thakte hobe ( https://nodejs.org ).
 								-- check node installed or not, command: node -v
 		
@@ -45,7 +45,7 @@
 						
 		//-- Tailwind CSS installation by Command line (CLI)					
 						-- npm init -y							//1ti node initialize kore pelbo //will create a ''package.json' file
-						-- npm i -D tailwindcss		//or npm i tailwindcss //tailwind css k developer dependency hisebe install kore nibo package.json file er dependency te
+						-- npm i -D tailwindcss		//tailwind css k developer dependency hisebe install kore nibo package.json file er dependency te
 						-- npx tailwindcss init			//tailwind css er jonno ekti configuration file banano. //project er moddhe "tailwind.config.js" name e ekti file create hoye jabe. ei file e amra tailwind er sokol configuration + customization er kaj korte parbo.
 						
 						-- ekn amra amder project e "output" & "src" hisebe 2ta file create korbo.
@@ -88,8 +88,8 @@
 
 
 //----------------------------------------------- #04 Responsive variants - Tailwind Breakpoints --------------------------------------------------
-		//-- Tailwind- utility first approach use kore, ar Onnodike Bootstrap components based(ex: full Card banano thake) approach use kore.
-		//-- doc_link: https://tailwindcss.com/docs/utility-first
+//----------------------------------------------- #05 Hover focus & other state variants --------------------------------------------------
+		
 
 
 
