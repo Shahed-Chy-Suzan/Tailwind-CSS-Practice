@@ -88,8 +88,10 @@
 
 
 //----------------------------------------------- #04 Responsive variants - Tailwind Breakpoints --------------------------------------------------
+			//-- https://tailwindcss.com/docs/responsive-design
+			
 //----------------------------------------------- #05 Hover focus & other state variants --------------------------------------------------
-		
+			//-- https://tailwindcss.com/docs/hover-focus-and-other-states
 
 
 
