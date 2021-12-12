@@ -29,11 +29,31 @@
   }
 }
 
-
+/* --------------------------------------------------------------------------------------------- */
 @variants focus, hover {
   .rotate-0 {
     color: yellow;
     text-decoration: underline;
   }
 }
+/* --------------------------------------------------------------------------------------------- */
 
+@responsive {
+  .bg-gradient-responsive {
+    background-image: linear-gradient(blue, yellow);
+  }
+}
+/* --------------------------------------------------------------------------------------------- */
+
+@screen md {
+  .bg-gradient-screen {
+    background-image: linear-gradient(blue, black);
+  }
+}
+/* ---------OR----------------- */
+/* @media screen(md) {
+  .bg-gradient-screen {
+    background-image: linear-gradient(blue, black);
+  }
+} */
+/* --------------------------------------------------------------------------------------------- */

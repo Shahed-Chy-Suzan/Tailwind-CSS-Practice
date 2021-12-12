@@ -257,20 +257,56 @@
 //==============================================================================================
 //------------------------------------------------- #09 @variants Directive ------------------------------------------------------------
 			
+			//-- documentation_link: https://v2.tailwindcss.com/docs/functions-and-directives#variants
 			//-- amra jani ekhane amra j amader custom kicho css code likhi ta amra amader project er CSS file er "@layer utilities{}" er moddhe likhe thaki, but amra amader ei newly add kora custom CSS code gula kinto amra tailwind e statVariant (hover, focus etc) te dile kaj korbe na, So eigula k amader statVariant e kaj koranor jonno amader k @variants directive use korte hobe, @variants er pashe amader statVariant ta mention kore css code ta likte hobe, niche ekta example deya holo,
-			//------------------------------------------------------- html file -------------------------------------------
-							<body>
-									<div class="hover:rotate-0">Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum minus ullam voluptatem quis eos commodi facere, dolor animi quam non, qui neque porro velit corporis temporibus labore est. Consequatur, repellendus!</div>
-							</body>
-			//----------------------------------------------------- src/tailwind.css file ---------------------------------------------
-							@variants focus, hover {
-								  .rotate-0 {
-										color: yellow;
-										text-decoration: underline;
-								  }
-							}
+					//------------------------------------------------------- html file -------------------------------------------
+									<body>
+											<div class="hover:rotate-0"> Lorem ipsum dolor sit amet consectetur adipisicing elit repellendus! </div>
+									</body>
+					//----------------------------------------------------- src/tailwind.css file ---------------------------------------------
+									@variants focus, hover {
+										  .rotate-0 {
+												color: yellow;
+												text-decoration: underline;
+										  }
+									}
 
 
+
+//==============================================================================================
+													******	#10 @responsive and @screen Directives	 ******
+//==============================================================================================
+//------------------------------------------------- #10 @responsive and @screen Directives ------------------------------------------------------------
+			
+			//-- @responsive -->> documentation_linka: https://v2.tailwindcss.com/docs/functions-and-directives#responsive
+						-- amra etokkon amader tailwind e default j utilities gula ache ogula k easily responsive korete partam (  sm:text-white ) erokom likhe, but amra ekn jodi amader nijer banano css class gula k evabe responsive e use korte chai taile amader k @responsive directive use korte hobe, for example:
+							//------------------------------------------------------- html file -------------------------------------------
+										  <div class="sm:bg-gradient-brand">
+											Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum minus ullam voluptatem
+										  </div>
+							//----------------------------------------------------- src/tailwind.css file ---------------------------------------------
+											@responsive {
+												  .bg-gradient-brand {
+													background-image: linear-gradient(blue, green);
+												  }
+											}
+			
+			//-- @screen -->> documentation_linka: https://v2.tailwindcss.com/docs/functions-and-directives#screen
+						-- amra etokkon amader tailwind e default j utilities gula ache ogula k easily responsive korete partam (  sm:text-white ) erokom likhe, but amra ekn jodi amader nijer banano css class gula k evabe responsive e use korte chai taile amader k @responsive directive use korte hobe, && amra jodi chai j amader ei new own created css class gula k vibinno device onosare responsive korte taile amader k ei @screen derective ( @screen sm{} ) or ( @media screen(sm){} ) use korte hobe, for example:
+								//------------------------------------------------------- html file -------------------------------------------
+											  <div class="sm:bg-gradient-brand">
+												Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum minus ullam voluptatem quis eos commodi facere, dolor animi quam non, qui neque porro velit corporis temporibus labore est. Consequatur, repellendus!
+											  </div>
+								//----------------------------------------------------- src/tailwind.css file ---------------------------------------------
+												@screen sm {
+													  .bg-gradient-brand {
+														background-image: linear-gradient(blue, green);
+													  }
+												}
+												//------------------OR--------------------------
+												@media screen(sm) {
+												  /* ... */
+												}
 
 
 
