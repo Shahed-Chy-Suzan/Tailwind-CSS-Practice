@@ -43,11 +43,12 @@
 //======================================================================================================================
 //-------------------------------------------------------------- #02 Tailwind Installation --------------------------------------------------
 			
-		//-- Installation with Tialwind CSS CDN	 //but ei process e korle amra tailwind k customize korte parbo na.
-		//-- Install as PostCSS Plugin 	//difficult for fresher
-		//-- Install tailwind CLI 	//easier process //etar fole amara Command Line diye tailwind use korte parbo. //etai best approach
-						-- tailwind CLI machine e install er prerequisit hocche machine e Node.js >= 12.3.0 install thakte hobe ( https://nodejs.org ).
-								-- check node installed or not, command: node -v
+		//-- Tailwind CSS k 3vabe  use kora jai, niche ta likha holo:
+			//--1-- Installation with Tialwind CSS CDN	 //but ei process e korle amra tailwind k customize korte parbo na.
+			//--2-- Install as PostCSS Plugin 	//difficult for fresher //tailwind css k postCSS er ekta plugin hisebe use kora. 
+			//--3-- Install tailwind CLI 	//easier process //etar fole amara Command Line diye tailwind use korte parbo. //etai best approach //customize korte parbo.
+							-- tailwind CLI machine e install er prerequisit hocche machine e Node.js >= 12.3.0 install thakte hobe ( https://nodejs.org ).
+									-- check node installed or not, command: node -v
 		
 		//-- VS Code plugin for tailwind css : 
 						-- Link: https://marketplace.visualstudio.com/items?itemName=bradlc.vscode-tailwindcss
@@ -402,6 +403,37 @@
 
 
 
+//============================================================================================================================
+													******	#13 PostCSS Installation	 ******
+//============================================================================================================================
+//------------------------------------------------- #13 PostCSS Installation ------------------------------------------------------------
+
+			//--PostCSS tailwindcss k ekta plugin hisebe use kore, PostCSS ekta famous CSS tooling, saas/less egula css er prepocessor, ar postCSS css k pore transform kore, er sobida holo modern jesob framwork ache ogula under the hood ei postCSS kei use kore, for example next.js or other framwork e amra dekbo j amader k extra vabe eirom tailwind css install kora lage nai, default vabei royeche tailwind css, kinto tailwind tho onek pore esheche next.js theke! taile eta kivabe holo? ekhane ora postCSS use kore, mane ora bivinno plugin er sobida rekheche, kew plugin dile tara ta project e add kre dei, tai Tailwind tader postCSS er ekta plugin hisebe ekta tailwind k diye diyeche, postCSS onek fast, plugin(like autoprefixer),customization sobida royeche, aro onek sobida royeche ei postCSS e, amra ekn ei postCSS installation method ta dekbo. 
+			
+					--1-- installation: npm i postcss postcss-cli autoprefixer			//postcss + autoprefixer plugin install
+								-- in package.json file we will see:
+											  "dependencies": {
+												"autoprefixer": "^10.4.0",
+												"postcss": "^8.4.4",
+												"postcss-cli": "^9.0.2"
+											  }
+											  
+					--2-- npx tailwindcss init -p			//postcss.config.js + tailwind.config.js file create
+									-- in postcss.config.js -------------
+												module.exports = {
+													  plugins: {
+															tailwindcss: {},
+															autoprefixer: {},
+													  },
+												}
+
+				--3-- in package.json file add a 'build-p' scripts to build postCSS -----------------------
+							  "scripts": {
+									"build": "tailwindcss -i ./src/tailwind.css -o ./output/tailwind.css -w",
+									"build-p": "postcss ./src/tailwind.css -o ./output/tailwind.css -w"
+							  },
+							  
+				-- run project by command: npm run build-p
 
 
 
@@ -409,10 +441,17 @@
 
 
 
-//==============================================================================================
-													******	#07 Composing Utilities with @apply Directive	 ******
-//==============================================================================================
-//------------------------------------------------- #07 Composing Utilities with @apply Directive ------------------------------------------------------------
+
+
+
+
+
+
+
+//============================================================================================================================
+													******	#12 Tailwind Configurations	 ******
+//============================================================================================================================
+//------------------------------------------------- #12 Tailwind Configurations ------------------------------------------------------------
 
 -- typo mistake in tailwind css doc: https://tailwindcss.com/docs/adding-custom-styles#adding-component-classes
 				-- you can still user utility classes
