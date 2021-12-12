@@ -256,9 +256,19 @@
 													******	#09 @variants Directive	 ******
 //==============================================================================================
 //------------------------------------------------- #09 @variants Directive ------------------------------------------------------------
-
-
-
+			
+			//-- amra jani ekhane amra j amader custom kicho css code likhi ta amra amader project er CSS file er "@layer utilities{}" er moddhe likhe thaki, but amra amader ei newly add kora custom CSS code gula kinto amra tailwind e statVariant (hover, focus etc) te dile kaj korbe na, So eigula k amader statVariant e kaj koranor jonno amader k @variants directive use korte hobe, @variants er pashe amader statVariant ta mention kore css code ta likte hobe, niche ekta example deya holo,
+			//------------------------------------------------------- html file -------------------------------------------
+							<body>
+									<div class="hover:rotate-0">Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum minus ullam voluptatem quis eos commodi facere, dolor animi quam non, qui neque porro velit corporis temporibus labore est. Consequatur, repellendus!</div>
+							</body>
+			//----------------------------------------------------- src/tailwind.css file ---------------------------------------------
+							@variants focus, hover {
+								  .rotate-0 {
+										color: yellow;
+										text-decoration: underline;
+								  }
+							}
 
 
 

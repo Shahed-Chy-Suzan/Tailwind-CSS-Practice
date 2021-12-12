@@ -3,7 +3,6 @@
 @tailwind utilities;
 
 @layer components {
-  /* group utilities */
   .btn {
     @apply px-4 py-1 border rounded-full text-sm font-semibold focus:outline-none focus:ring-2 focus:ring-offset-2 hover:text-white hover:border-transparent dark:focus:ring-offset-gray-800 dark:focus:border-transparent;
     @apply p-2;
@@ -29,3 +28,12 @@
     font-size: 12px;
   }
 }
+
+
+@variants focus, hover {
+  .rotate-0 {
+    color: yellow;
+    text-decoration: underline;
+  }
+}
+
