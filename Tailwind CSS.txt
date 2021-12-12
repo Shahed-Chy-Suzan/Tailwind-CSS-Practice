@@ -32,15 +32,15 @@
 
 
 
-//==================================================================================================
+//==========================================================================================================================
 											------------------ Start Tailwind CSS -----------------------
-//==================================================================================================
+//==========================================================================================================================
 
 
 
-//==============================================================================================
+//======================================================================================================================
 													******	#02 Tailwind Installation	 ******
-//==============================================================================================
+//======================================================================================================================
 //-------------------------------------------------------------- #02 Tailwind Installation --------------------------------------------------
 			
 		//-- Installation with Tialwind CSS CDN	 //but ei process e korle amra tailwind k customize korte parbo na.
@@ -91,34 +91,34 @@
 
 
 
-//==============================================================================================
+//======================================================================================================================
 													******	#03 Utility-First Approach	 ******
-//==============================================================================================
+//======================================================================================================================
 //------------------------------------------------------------- #03 Utility-First Approach ------------------------------------------------------------------------
 		//-- Tailwind- utility first approach use kore, ar Onnodike Bootstrap components based(ex: full Card banano thake) approach use kore.
 		//-- doc_link: https://tailwindcss.com/docs/utility-first
 
 
 
-//==============================================================================================
+//======================================================================================================================
 													******	#04 Responsive variants - Tailwind Breakpoints	 ******
-//==============================================================================================
+//======================================================================================================================
 //--------------------------------------------------- #04 Responsive variants - Tailwind Breakpoints ---------------------------------------------------------
 			//-- https://tailwindcss.com/docs/responsive-design
 			
 			
 			
-//==============================================================================================
+//======================================================================================================================
 													******	#05 Hover focus & other state variants	 ******
-//==============================================================================================
+//======================================================================================================================
 //--------------------------------------------------- #05 Hover focus & other state variants -------------------------------------------------------------------
 			//-- https://tailwindcss.com/docs/hover-focus-and-other-states
 
 
 
-//==============================================================================================
+//======================================================================================================================
 													******	#06 Dark mode variant	 ******
-//==============================================================================================
+//======================================================================================================================
 //--------------------------------------------------- #06 Dark mode variant --------------------------------------------------------------------------------------
 			//-- https://tailwindcss.com/docs/dark-mode
 			-- 1 -- amra dark mood er jonno ( dark:bg-gray-900 ) ei class gula add kori tailwind-css e, evabe just "dark" variant class ta add korle amader website dark hobe amader PC/machine/laptop er theme-preference er opor, amane amader PC/machine/laptop er theme jodi dark e set kora thake taile website automatic tailwind er dark code gula use korbe, & PC/machine/laptop e theme dark set kora na thakle default/white theme er code use korbe tailwind.
@@ -145,9 +145,9 @@
 
 
 
-//==============================================================================================
+//======================================================================================================================
 													******	#07 Composing Utilities with @apply Directive	 ******
-//==============================================================================================
+//======================================================================================================================
 //------------------------------------------------- #07 Composing Utilities with @apply Directive ------------------------------------------------------------
 			//-- documentation_link: https://tailwindcss.com/docs/reusing-styles#extracting-classes-with-apply
 			//-- amra amader project e reuseable CSS code gular jonno chaile ei @apply use kore kaj korte pari,
@@ -174,9 +174,9 @@
 
 
 
-//====================================================================================================
+//============================================================================================================================
 										******	#08 Tailwind @layer Directive - Understand Tailwind Layers	 ******
-//====================================================================================================
+//============================================================================================================================
 //----------------------------------------------------- #08 Tailwind @layer Directive - Understand Tailwind Layers ------------------------------------------------------------
 			//-- documentation_link: https://tailwindcss.com/docs/adding-custom-styles#using-css-and-layer
 			
@@ -252,9 +252,9 @@
 
 
 
-//==============================================================================================
+//======================================================================================================================
 													******	#09 @variants Directive	 ******
-//==============================================================================================
+//======================================================================================================================
 //------------------------------------------------- #09 @variants Directive ------------------------------------------------------------
 			
 			//-- documentation_link: https://v2.tailwindcss.com/docs/functions-and-directives#variants
@@ -273,20 +273,20 @@
 
 
 
-//==============================================================================================
+//===========================================================================================================================
 													******	#10 @responsive and @screen Directives	 ******
-//==============================================================================================
+//===========================================================================================================================
 //------------------------------------------------- #10 @responsive and @screen Directives ------------------------------------------------------------
 			
 			//-- @responsive -->> documentation_linka: https://v2.tailwindcss.com/docs/functions-and-directives#responsive
 						-- amra etokkon amader tailwind e default j utilities gula ache ogula k easily responsive korete partam (  sm:text-white ) erokom likhe, but amra ekn jodi amader nijer banano css class gula k evabe responsive e use korte chai taile amader k @responsive directive use korte hobe, for example:
 							//------------------------------------------------------- html file -------------------------------------------
-										  <div class="sm:bg-gradient-brand">
+										  <div class="sm:bg-gradient-responsive">
 											Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum minus ullam voluptatem
 										  </div>
 							//----------------------------------------------------- src/tailwind.css file ---------------------------------------------
 											@responsive {
-												  .bg-gradient-brand {
+												  .bg-gradient-responsive {
 													background-image: linear-gradient(blue, green);
 												  }
 											}
@@ -294,20 +294,41 @@
 			//-- @screen -->> documentation_linka: https://v2.tailwindcss.com/docs/functions-and-directives#screen
 						-- amra etokkon amader tailwind e default j utilities gula ache ogula k easily responsive korete partam (  sm:text-white ) erokom likhe, but amra ekn jodi amader nijer banano css class gula k evabe responsive e use korte chai taile amader k @responsive directive use korte hobe, && amra jodi chai j amader ei new own created css class gula k vibinno device onosare responsive korte taile amader k ei @screen derective ( @screen sm{} ) or ( @media screen(sm){} ) use korte hobe, for example:
 								//------------------------------------------------------- html file -------------------------------------------
-											  <div class="sm:bg-gradient-brand">
-												Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum minus ullam voluptatem quis eos commodi facere, dolor animi quam non, qui neque porro velit corporis temporibus labore est. Consequatur, repellendus!
+											  <div class="bg-gradient-screen text-yellow-600">
+													screen  screen  screen  screen  screen  screen  screen  screen  screen  screen  screen 
 											  </div>
 								//----------------------------------------------------- src/tailwind.css file ---------------------------------------------
-												@screen sm {
-													  .bg-gradient-brand {
-														background-image: linear-gradient(blue, green);
+												@screen md {
+													  .bg-gradient-screen {
+														background-image: linear-gradient(blue, black);
 													  }
 												}
 												//------------------OR--------------------------
-												@media screen(sm) {
-												  /* ... */
+												@media screen(md) {
+													  .bg-gradient-screen {
+															background-image: linear-gradient(blue, black);
+													  }
 												}
 
+
+
+//============================================================================================================================
+													******	#11 theme() and screen() - Tailwind Functions	 ******
+//============================================================================================================================
+//------------------------------------------------- #11 theme() and screen() - Tailwind Functions ------------------------------------------------------------
+			
+			//-- @responsive -->> documentation_linka: https://v2.tailwindcss.com/docs/functions-and-directives#theme
+						-- amra etokkon amader tailwind e default j utilities gula ache ogula k easily responsive korete partam (  sm:text-white ) erokom likhe, but amra ekn jodi amader nijer banano css class gula k evabe responsive e use korte chai taile amader k @responsive directive use korte hobe, for example:
+							//------------------------------------------------------- html file -------------------------------------------
+										  <div class="sm:bg-gradient-responsive">
+											Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum minus ullam voluptatem
+										  </div>
+							//----------------------------------------------------- src/tailwind.css file ---------------------------------------------
+											@responsive {
+												  .bg-gradient-responsive {
+													background-image: linear-gradient(blue, green);
+												  }
+											}
 
 
 
