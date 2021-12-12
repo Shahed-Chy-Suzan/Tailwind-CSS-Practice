@@ -278,7 +278,7 @@
 //===========================================================================================================================
 //------------------------------------------------- #10 @responsive and @screen Directives ------------------------------------------------------------
 			
-			//-- @responsive -->> documentation_linka: https://v2.tailwindcss.com/docs/functions-and-directives#responsive
+			//-- @responsive -->> documentation_link: https://v2.tailwindcss.com/docs/functions-and-directives#responsive
 						-- amra etokkon amader tailwind e default j utilities gula ache ogula k easily responsive korete partam (  sm:text-white ) erokom likhe, but amra ekn jodi amader nijer banano css class gula k evabe responsive e use korte chai taile amader k @responsive directive use korte hobe, for example:
 							//------------------------------------------------------- html file -------------------------------------------
 										  <div class="sm:bg-gradient-responsive">
@@ -291,7 +291,7 @@
 												  }
 											}
 			
-			//-- @screen -->> documentation_linka: https://v2.tailwindcss.com/docs/functions-and-directives#screen
+			//-- @screen -->> documentation_link: https://v2.tailwindcss.com/docs/functions-and-directives#screen
 						-- amra etokkon amader tailwind e default j utilities gula ache ogula k easily responsive korete partam (  sm:text-white ) erokom likhe, but amra ekn jodi amader nijer banano css class gula k evabe responsive e use korte chai taile amader k @responsive directive use korte hobe, && amra jodi chai j amader ei new own created css class gula k vibinno device onosare responsive korte taile amader k ei @screen derective ( @screen sm{} ) or ( @media screen(sm){} ) use korte hobe, for example:
 								//------------------------------------------------------- html file -------------------------------------------
 											  <div class="bg-gradient-screen text-yellow-600">
@@ -317,18 +317,91 @@
 //============================================================================================================================
 //------------------------------------------------- #11 theme() and screen() - Tailwind Functions ------------------------------------------------------------
 			
-			//-- @responsive -->> documentation_linka: https://v2.tailwindcss.com/docs/functions-and-directives#theme
-						-- amra etokkon amader tailwind e default j utilities gula ache ogula k easily responsive korete partam (  sm:text-white ) erokom likhe, but amra ekn jodi amader nijer banano css class gula k evabe responsive e use korte chai taile amader k @responsive directive use korte hobe, for example:
-							//------------------------------------------------------- html file -------------------------------------------
-										  <div class="sm:bg-gradient-responsive">
-											Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum minus ullam voluptatem
-										  </div>
-							//----------------------------------------------------- src/tailwind.css file ---------------------------------------------
-											@responsive {
-												  .bg-gradient-responsive {
-													background-image: linear-gradient(blue, green);
-												  }
+			//-- theme() -->> documentation_link: https://v2.tailwindcss.com/docs/functions-and-directives#theme
+						-- Use the theme() function to access your Tailwind config values using dot notation.
+								//----------------------------------------------------- src/tailwind.css file ---------------------------------------------
+											.content-area {				/* for theme() */
+												height: calc(100vh - theme("spacing.12"));
 											}
+
+
+
+
+//============================================================================================================================
+													******	#12 Tailwind Configurations	 ******
+//============================================================================================================================
+//------------------------------------------------- #12 Tailwind Configurations ------------------------------------------------------------
+			
+			//-- Configurations -->> documentation_link: https://v2.tailwindcss.com/docs/configuration
+						//----------------------------------------- tailwind.config.js -----------------------------------------------------------
+									module.exports = {
+										  purge: [],
+										  darkMode: 'class', // or 'media' or 'class' //default vabe ( false ) likha chilo //'class' for dark mood on toogle
+										  theme: {
+												extend: {},
+										  },
+										  variants: {
+												extend: {},
+										  },
+										  plugins: [],
+									}
+
+						-- purge : ekhane amra jani 'purge' means porisker/clean kora, amader er tailwind e onek onek buildin class royeche eisob class kinto build hoy na, amra ja ja class amader html/project file e use khoje khoje just oi class gulai build hoy, R ei kaj ta kore hocche 'purge', amra chaile ekahne ei configuration file/tailwind.config.js file er purge[] array ta thee amra j j file gula theke build korar jonno class filter/bachai korbo oi file gular path bole dithe pari, jar fole just oi file gular e css class gula build hobe, onnanno class+tailwind  er baki sob class gula build hobe na.
+						
+						-- darkMood : eta niye amra opore dark mood variant section e jenechi, tao jodi shortcut e bolte hoy, ekhane darkMood er 2ta value thakte pare, ekta holo 'media' R arekta holo 'class', jokon amra 'media' dibo tkn amader machine/laptop er theme er preference(dark/light) onosare show/kaj korbe, R amra jodi 'class' dei taile amader whole html er file e top level e ekta 'dark' class add kore dibe tarpor amra dark: diye dark variant er maddhome ei kaj ta korte pari,
+						
+						-- theme : 'theme' e amra amader pora desing system ta bole dibo, 'theme' ta holo bishal ekta object,( https://github.com/tailwindlabs/tailwindcss/blob/master/stubs/defaultConfig.stub.js ), 'theme' er moddhe vibinno plugin gula bolbo(ex: spacing, color). amra jodi chai j ekhane tailwind e j 'gray-300' color ta ache ta amr pochondo noi, ami eta k change korbo, taile amader k tkn ei config er 'theme' e hath deya lagbe, ( link: https://v2.tailwindcss.com/docs/customizing-colors )
+								-- amra ekn ekta custom color add kora dekbo, ekhane amra theme er moddhe color object e ekta new blue color add korechi 450 name e, so amra ekn eta k easily amader code e "text-blue-450" likhe use korte parbo, BUT ekhane problem holo ekhane "colors" object ta deowai amader tailwind er pora default colors object tai ar kaj korbe na, amader project e ei colors object tai just kaj korbe, tar mane amara tailwind er default vabe set kore deowa attogula color variant/color palatte gula ar use korte parbo na, nicher code e amader tailwind er default color "bg-yellow-400" code ta kaj korbe na, only "text-blue-450" ta kaj korbe,
+										//----------------------------------------- index.html -----------------------------------------------------------
+													<div class="bg-yellow-400 text-blue-450"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum minus ullam voluptatem quis eos commodi facere, dolor animi quam non </div>
+										
+										//----------------------------------------- tailwind.config.js -----------------------------------------------------------
+													  theme: {
+																colors: {
+																	  blue: {
+																		450: '#5F99F7'
+																	  },
+																},
+															extend: {},
+													  },
+													  
+								-- So ei problem theke solution holo, mane amra jodi chai j amra j new color ta add korbo oitao thakbe ++ amader tailwind er default set kore deya color-pallete gulao thakbe, kaj korbe taile amader k ai color customization er code ta amader config file er "theme" er "extend{}" object er vitor likhte hobe, ( link: https://v2.tailwindcss.com/docs/customizing-colors#extending-the-defaults ), amader ekhane nicher code e amader tailwind er default color "bg-yellow-400" code tao kaj korbe ++ amader new create kora "text-blue-450" ta kaj korbe,
+										//----------------------------------------- index.html -----------------------------------------------------------
+												  <div class="bg-yellow-400 text-blue-450"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum minus ullam voluptatem quis eos commodi facere, dolor animi quam non </div> <br>
+												  <div class="bg-regal-blue"> legal blue legal blue legal blue legal blue legal blue </div>
+										//----------------------------------------- tailwind.config.js -----------------------------------------------------------
+													module.exports = {
+														  theme: {
+																extend: {
+																	  colors: {
+																			blue: {
+																				450: '#5F99F7'								//text-blue-450
+																			},
+																			'regal-blue': '#243c5a',					//bg-regal-blue
+																	  }
+																}
+														  }
+													}
+													//--------------or-----------------------
+													module.exports = {
+														  theme: {
+																extend: {
+																	  colors: {
+																			blue: {
+																				450: '#5F99F7'
+																			},
+																	  }
+																}
+														  }
+													}
+
+						-- variants : variants section o same, mane amra kon kon variants allow korte chai, oporer theme er motho concept, amra chaile tailwind er sob default variants(hover,focus) badh diye nijer variants create and use korte pari, Or extends kore tailwind er default gular pashapashi new variants create koreo use korte pari,
+						
+						-- plugins : plugins er moddhe amra chaile third-party tailwind plugin array er moddhe comma(,) akare bole dithe pari, segula amra just install korbo(npm install) R import korbo, 
+
+
+
+
 
 
 
