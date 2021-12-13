@@ -366,7 +366,7 @@
 															extend: {},
 													  },
 													  
-								-- So ei problem theke solution holo, mane amra jodi chai j amra j new color ta add korbo oitao thakbe ++ amader tailwind er default set kore deya color-pallate gulao thakbe, kaj korbe taile amader k ai color customization er code ta amader config file er "theme" er "extend{}" object er vitor likhte hobe, ( link: https://v2.tailwindcss.com/docs/customizing-colors#extending-the-defaults ), amader ekhane nicher code e amader tailwind er default color "bg-yellow-400" code tao kaj korbe ++ amader new create kora "text-blue-450" ta kaj korbe,
+								-- So ei problem theke solution holo, mane amra jodi chai j amra j new color ta add korbo oitao thakbe ++ amader tailwind er default set kore deya color-palette gulao thakbe, kaj korbe taile amader k ai color customization er code ta amader config file er "theme" er "extend{}" object er vitor likhte hobe, ( link: https://v2.tailwindcss.com/docs/customizing-colors#extending-the-defaults ), amader ekhane nicher code e amader tailwind er default color "bg-yellow-400" code tao kaj korbe ++ amader new create kora "text-blue-450" ta kaj korbe,
 										//----------------------------------------- index.html -----------------------------------------------------------
 												  <div class="bg-yellow-400 text-blue-450"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum minus ullam voluptatem quis eos commodi facere, dolor animi quam non </div> <br>
 												  <div class="bg-regal-blue"> legal blue legal blue legal blue legal blue legal blue </div>
@@ -465,6 +465,25 @@
 									}
 										// ...
 							  }
+
+
+
+
+//============================================================================================================================
+																****	#15 Theme Configuration ++ #16 Extend Theme	 ****
+//============================================================================================================================
+//---------------------------------------------------------- #15 Theme Configuration ++ #16 Extend Theme ------------------------------------------------------------
+			-- Theme Configuration documentation_link v2: https://v2.tailwindcss.com/docs/theme
+			-- Theme Configuration documentation_link v3: https://tailwindcss.com/docs/theme
+			
+			-- YouTube link: https://www.youtube.com/watch?v=VTOLMaaTKw0&list=PLHiZ4m8vCp9P23SqlHL0QAqiwS_oCofV2&index=15
+			
+			-- Theme Configuration : --->>> The theme section of your tailwind.config.js file is where you define your project’s color palette, type scale, fonts, breakpoints, border radius values, and more.
+			
+			-- Extending the default theme - If you’d like to preserve the default values for a theme option but also add new values, add your extensions under the extend key in the theme section of your configuration file.
+			-- Overriding the default theme - To override an option in the default theme, add your overrides directly under the theme section of your tailwind.config.js, This will completely replace Tailwind’s default configuration for that key, so in the example above none of the default opacity utilities would be generated. 
+
+			-- baki onek concept " #12 Tailwind Configurations " e alochona kora hoyechilo opore. +++ check documentation_link
 
 
 
