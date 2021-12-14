@@ -11,6 +11,7 @@
 				//-------Upgrading your Tailwind CSS projects from v2 to v3. || Tailwind CSS v3.0-----------//
 						-- Release notes: https://tailwindcss.com/blog/tailwindcss-v3
 						-- Upgrade guide: https://tailwindcss.com/docs/upgrade-guide
+						-- YT link:  https://www.youtube.com/watch?v=mSC6GwizOag&list=WL&index=2&t=34s
 //-------------------------------------------------------------------------------------------------------------------------------------------
 
 
