@@ -496,6 +496,52 @@
 
 
 
+
+
+
+
+//============================================================================================================================
+													******	Whats New in V3 in Tailwind CSS	 ******
+//============================================================================================================================
+//------------------------------------------------- Whats New in V3 in Tailwind CSS ------------------------------------------------------------
+					
+				-- Release notes: https://tailwindcss.com/blog/tailwindcss-v3
+				-- Upgrade guide: https://tailwindcss.com/docs/upgrade-guide
+				-- YT link:  https://www.youtube.com/watch?v=mSC6GwizOag&list=WL&index=2&t=34s
+				
+				
+				-- Remove dark mode configuration
+				-- Remove variant configuration ++ Replace @variants with @layer
+				-- JIT engine : --->> 
+							-- Upgrade Link: https://tailwindcss.com/docs/upgrade-guide#migrating-to-the-jit-engine 
+							-- If you were already opting in to mode: 'jit' in Tailwind CSS v2.x, you can safely remove that from your configuration in v3.0. 
+							-- Configure content sources :
+									-- Since Tailwind no longer uses PurgeCSS under the hood, we’ve renamed the purge option to content to better reflect what it’s for. Since Tailwind no longer uses PurgeCSS under the hood, we’ve renamed the purge option to content to better reflect what it’s for. 
+											//---------------------------------------------------- tailwind.config.js ------------------------------------------------------------------
+															module.exports = {
+																  purge: [						//---------- XXXX --- this is no longer exist now, replaced with 'content'--- XXXX---------------
+																  content: [
+																		// Example content paths...
+																		'./public/**/*.html',
+																		'./src/**/*.{js,jsx,ts,tsx,vue}',
+																  ],
+																  theme: {
+																		// ...
+																  }
+																  // ...
+															}
+
+
+
+
+
+
+
+
+
+
+
+
 //============================================================================================================================
 													******	#17 Extend Variants	 ******
 //============================================================================================================================
