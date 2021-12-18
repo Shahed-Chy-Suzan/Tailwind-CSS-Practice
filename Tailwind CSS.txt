@@ -7,8 +7,16 @@
 
 
 
+
+//---------------------------------------------------------------------------------------------------------------------------------------------
+				-- My_GitHub_repo: https://github.com/Shahed-Chy-Suzan/Tailwind-CSS-Practice
+//---------------------------------------------------------------------------------------------------------------------------------------------
+
+
+
+
 //-------------------------------------------------------------------------------------------------------------------------------------------
-				//-------Upgrading your Tailwind CSS projects from v2 to v3. || Tailwind CSS v3.0-----------//
+				//------- Upgrading your Tailwind CSS projects from v2 to v3. || Tailwind CSS v3.0 -----------//
 						-- Release notes: https://tailwindcss.com/blog/tailwindcss-v3
 						-- Upgrade guide: https://tailwindcss.com/docs/upgrade-guide
 						-- YT link:  https://www.youtube.com/watch?v=mSC6GwizOag&list=WL&index=2&t=34s
@@ -16,7 +24,7 @@
 
 
 //------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-											//-------------- Resources of Tailwind CSS --------------//
+											//-------------- Video Resources of Tailwind CSS --------------//
 				-- Learn with sumit YT : https://www.youtube.com/playlist?list=PLHiZ4m8vCp9P23SqlHL0QAqiwS_oCofV2
 							-- Learn with sumit git : https://github.com/learnwithsumit/tailwind-playlist				
 				-- YT -Landing Page : https://www.youtube.com/watch?v=00gyCtIQp8E&list=WL&index=2&t=64s
@@ -30,9 +38,53 @@
 
 
 
-//---------------------------------------------------------------------------------------------------------------------------------------------
-				-- My_GitHub_repo: https://github.com/Shahed-Chy-Suzan/Tailwind-CSS-Practice
-//---------------------------------------------------------------------------------------------------------------------------------------------
+
+//------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+											//-------------- Resources of Tailwind CSS || Template --------------//
+				-- Tailwind-Cards (hasin haydar) : https://github.com/hasinhayder/tailwind-cards
+							-- live link: https://tailwind-cards.netlify.app/
+				-- Ready-to-use Tailwind CSS blocks: https://github.com/mertJF/tailblocks
+							-- live link: https://tailblocks.cc/
+				-- Resources of Tailwind CSS || Template
+							-- github link: https://github.com/tailwindtoolbox
+							-- live link: https://www.tailwindtoolbox.com/ || https://www.tailwindtoolbox.com/starter-templates || https://www.tailwindtoolbox.com/starter-components 
+				-- Components: https://tailwindcomponents.com/components
+				-- https://blocks.wickedtemplates.com/
+//------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+
+
+
+//----------------------------------------------------------------------------------------------
+
+			//-----------Serial(Breadcum)--------------//
+			
+	1) Upgrading your Tailwind CSS projects from v2 to v3. || Tailwind CSS v3.0
+	2) Video Resources of Tailwind CSS
+	3) Resources of Tailwind CSS || Template
+	4) #02 Tailwind Installation
+				-- Tailwind CSS installation by Command line (CLI)
+				-- Tailwind CSS installation by PostCSS (PostCSS + Vite)
+				-- add FontAwesome + googleFonts
+	5) #03 Utility-First Approach
+	6) #04 Responsive variants - Tailwind Breakpoints
+	7) #05 Hover focus & other state variants
+	8) #06 Dark mode variant
+	9) #07 Composing Utilities with @apply Directive
+	10) #08 Tailwind @layer Directive - Understand Tailwind Layers
+	11) #09 @variants Directive
+	12) #10 @responsive and @screen Directives
+	13) #11 theme() and screen() - Tailwind Functions
+	14) #12 Tailwind Configurations
+				-- purge, darkMood. theme, variants, plugins
+	15) #13 PostCSS Installation
+	16) #14 Just in Time (JIT)
+	17) #15 Theme Configuration ++ #16 Extend Theme
+	18) Whats New in V3 in Tailwind CSS
+	19) 
+
+//----------------------------------------------------------------------------------------------
 
 
 
@@ -61,8 +113,9 @@
 		//-- VS Code plugin for tailwind css : 
 						-- Link: https://marketplace.visualstudio.com/items?itemName=bradlc.vscode-tailwindcss
 						-- plugin name: Tailwind CSS IntelliSense
-						
-		//-- Tailwind CSS installation by Command line (CLI)					
+		
+//--------------------------------------------------------------------------------------------------------------------------------------------------------------
+		//-- Tailwind CSS installation by Command line (CLI) :			
 						-- npm init -y							//1ti node initialize kore pelbo //will create a ''package.json' file
 						-- npm i -D tailwindcss		//tailwind css k developer dependency hisebe install kore nibo package.json file er dependency te
 						-- npx tailwindcss init			//tailwind css er jonno ekti configuration file banano. //project er moddhe "tailwind.config.js" name e ekti file create hoye jabe. ei file e amra tailwind er sokol configuration + customization er kaj korte parbo.
@@ -98,8 +151,78 @@
 		//-- run command: npm run build			//eti amder code k build kore pelbe, amra ready ekn code korar jonno tailwind css e.
 
 
+//----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+		//-- Tailwind CSS installation by PostCSS (PostCSS + Vite) : 
+					//-- ei project e amra ja ja use korbo : 
+							-- 1 -- tailwind process korar jonno 'PostCss', Link: https://postcss.org/
+							-- 1 -- tailwind locally install er jonno "vite" (frontend building tool hisebe), Link: https://vitejs.dev/
+							-- 2 -- Icon er jonno "fontawesome", Link: https://fontawesome.com/
+							-- 1 -- font er jonno "googlefont", Link: https://fonts.google.com/
+					
+					//------------------------------------------------ Start Installation --------------------------------------------------------
+								-- npm init -y																				//will create a ''package.json' file
+								-- npm install -D tailwindcss postcss autoprefixer vite
+								-- npx tailwindcss init -p															//postcss.config.js + tailwind.config.js file create
+								-- created 'index.html' file in project root
+								-- created 'style.css' file in project root and paste below code
+													@tailwind base;
+													@tailwind components;
+													@tailwind utilities;
+								-- in package.json ----------
+											  "scripts": {
+													"dev": "vite"						//------------
+												},
+								-- in tailwind.config.js ----------
+												module.exports = {
+													  content: [						//-------------------------
+															'*.html',
+															'./src/**/*.{html,js}',
+													  ],
+													  theme: {
+															extend: {},
+													  },
+													  plugins: [],
+												}
+
+								-- npm run dev				//project run korar jonno, http://localhost:3000/ e site run hobe
+								
+								-- amra jeheto ekhane 'vite' server use kortechi tai eta live update hobe.
 
 
+					//-------------------- add FontAwesome + googleFonts ---------------------------------------------------------------------------------
+					
+							//-- ekn amra font awesome er CDN link koriyechi index.html file e, then google font theke 2ta font "poppins" & "roboto" select kore ene CDN ta tao index.html e paste korechi, Now font er j css ta chilo(font-family: 'Poppins', sans-serif; font-family: 'Roboto', sans-serif;) ota k amader k tailwind.config.js e theme er extend e fontFamily te array akare  bole dithe hobe, mane amra ekn font ta use korar jonno amader "tailwind.config.js" e jabo okhane likbo: 
+												//---------------------------------- tailwind.config.js -------------------------------------
+															module.exports = {
+																content: ['*.html',	],
+																	  theme: {
+																			extend: {
+																				  fontFamily:{													//----------------------------
+																						'poppins': ['Poppins', 'sans-serif'],
+																						'roboto': ['Roboto', 'sans-serif']
+																				  }
+																			},
+																	  },
+																plugins: [],
+															}
+
+							-- ekn ei "poppins" & "roboto" name e amra class peye jabo amader html file e, ekn amra jodi amader ei font 2ta use korte chai taile amra html file e giye likbo: 
+										//--------------------------------- index.html --------------------------------------
+												  <h1 class="font-roboto">		//ekhane 'roboto' ta amara tailwind.config.js file e font er array er  j name ta diyechi oitai
+														Hello world!
+												  </h1>
+												  <h1 class="font-poppins">		//ekhane 'poppins' ta amara tailwind.config.js file e font er array er  j name ta diyechi oitai
+														Hello world!
+												  </h1>
+//--------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+		
+		
+		
+		
+		
+		
 //======================================================================================================================
 													******	#03 Utility-First Approach	 ******
 //======================================================================================================================
@@ -416,6 +539,8 @@
 //============================================================================================================================
 //------------------------------------------------- #13 PostCSS Installation ------------------------------------------------------------
 
+			//-- opore shorotei  PostCSS + Vite diye kivabe new TailwindCSS intall and run kora hobe ta dekhano hoyche, ekhane amara jeheto aghe tailwindcss install korechilam CLI diye ekn otar moddhei extra vabe PostCSS install kora dekbo just.
+			
 			//--PostCSS tailwindcss k ekta plugin hisebe use kore, PostCSS ekta famous CSS tooling, saas/less egula css er prepocessor, ar postCSS css k pore transform kore, er sobida holo modern jesob framwork ache ogula under the hood ei postCSS kei use kore, for example next.js or other framwork e amra dekbo j amader k extra vabe eirom tailwind css install kora lage nai, default vabei royeche tailwind css, kinto tailwind tho onek pore esheche next.js theke! taile eta kivabe holo? ekhane ora postCSS use kore, mane ora bivinno plugin er sobida rekheche, kew plugin dile tara ta project e add kre dei, tai Tailwind tader postCSS er ekta plugin hisebe ekta tailwind k diye diyeche, postCSS onek fast, plugin(like autoprefixer),customization sobida royeche, aro onek sobida royeche ei postCSS e, amra ekn ei postCSS installation method ta dekbo. 
 			
 					--1-- installation: npm i postcss postcss-cli autoprefixer			//postcss + autoprefixer plugin install
@@ -522,8 +647,9 @@
 																  purge: [						//---------- XXXX --- this is no longer exist now, replaced with 'content'--- XXXX---------------
 																  content: [
 																		// Example content paths...
-																		'./public/**/*.html',
-																		'./src/**/*.{js,jsx,ts,tsx,vue}',
+																		'./public/**/*.html',							// These paths are just examples, customize them to match your project structure
+																		'./src/**/*.{js,jsx,ts,tsx,vue}',			//details opore likha hoyeche
+																		'*.html',													//project er root e index.html file ta ke track korbe
 																  ],
 																  theme: {
 																		// ...
